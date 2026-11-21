@@ -1,0 +1,16 @@
+FUNCTION DigitalRoot(n)
+
+IF n < 10
+    RETURN n
+END IF
+
+sum = 0
+
+WHILE n > 0
+    sum = sum + (n MOD 10)
+    n = n DIV 10
+END WHILE
+
+RETURN DigitalRoot(sum)
+
+END FUNCTION
