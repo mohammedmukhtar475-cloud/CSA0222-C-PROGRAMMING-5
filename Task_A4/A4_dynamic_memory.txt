@@ -1,0 +1,27 @@
+FUNCTION AddDonor(list, donor)
+
+IF size == capacity THEN
+
+    IF capacity == 0 THEN
+        newCapacity = 2
+    ELSE
+        newCapacity = capacity * 2
+    END IF
+
+    p = realloc(data, newCapacity)
+
+    IF p == NULL THEN
+        RETURN FAILURE
+    END IF
+
+    data = p
+    capacity = newCapacity
+
+END IF
+
+data[size] = donor
+size = size + 1
+
+RETURN SUCCESS
+
+END FUNCTION
