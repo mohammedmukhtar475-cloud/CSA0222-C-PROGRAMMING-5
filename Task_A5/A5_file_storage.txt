@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void)
+{
+    FILE *fp;
+
+    fp = fopen("donors.txt", "w");
+
+    if (fp == NULL)
+    {
+        perror("File error");
+        return 1;
+    }
+
+    fprintf(fp, "1001 Mukhtar O+ 20\n");
+    fprintf(fp, "1002 Rahul A+ 22\n");
+    fprintf(fp, "1003 Arun B- 25\n");
+
+    fclose(fp);
+
+    printf("Donor records saved successfully\n");
+
+    return 0;
+}
