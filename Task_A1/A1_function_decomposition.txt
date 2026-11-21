@@ -1,0 +1,11 @@
+void registerDonor(void);
+
+int checkEligibility(int age, int daysSinceLastDonation);
+
+int findDonors(const char *group, int *ids, int maxSize);
+
+void updateStock(int *stock, int index, int units);
+
+int saveDonors(const char *filename);
+
+int loadDonors(const char *filename);
